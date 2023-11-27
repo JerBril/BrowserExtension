@@ -1,0 +1,36 @@
+{
+  "name": "Extension Demo",
+  "version": "1.0",
+  "description": "Build an Basic Extension!",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "main.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "pp.jpg"
+  ],
+  "browser_action": {
+    "default_title": "Click me",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon-48.png",
+    "96": "icon-96.png"
+  },
+  "manifest_version": 2
+}
